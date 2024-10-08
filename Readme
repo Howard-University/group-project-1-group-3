@@ -17,3 +17,5 @@ print(df_rank)
 df_rank=df
 df['species_rank']=df['species'].rank(ascending=False)
 print(df_rank)
+# Short Report
+#### In conclusion, this data was evaluated by checking for null values, filtering, sorting, ranking, and finding the mean, median, mode, and range of various aspects of the data. Through the analysis of the data, it became clear that the data contained a lot of values and the sizes of the fish varied greatly. I believe the large data set made the values less important because it was overwhelmed with data. 
