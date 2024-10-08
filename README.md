@@ -173,3 +173,12 @@ Smallest fish by weight: Puntius lateristriga at 2.63 g
 Largest fish by l : w ratio: Pethia conchonius at 0.49
 Smallest fish by l : w ratio: Coilia dussumieri at 0.11
 
+import numpy as np
+import pandas as pd
+df =pd.read_csv('fish_data.csv')
+print(df)
+missing_values = df[['species', 'length','weight','w_l_ratio']]
+print(missing_values)
+missing_values = df.isnull().sum()
+print(missing_values)
+
