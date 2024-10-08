@@ -1,0 +1,19 @@
+# Elise Webb's Work
+df = pd.read_csv('fish_data.csv')
+print(df)
+### Sorting the fish by length from longest to shortest
+length_sorted_df = df.sort_values(by='length', ascending = False)
+print(length_sorted_df)
+### Sorting the fish by weight:length ratio from smallest to largest
+wl_sorted_df = df.sort_values(by=['w_l_ratio'],ascending=True)
+print(wl_sorted_df)
+### Sorting the species column descending and weight column ascending from largest to smallest
+sw_sorted_df=df.sort_values(by=['species','weight'], ascending = [False, True])
+print(sw_sorted_df)
+### Ranking the length column decending from longest to shortest
+df_rank=df['length_rank']=df['length'].rank(ascending=False)
+print(df_rank)
+### Ranking the species column alphabetically
+df_rank=df
+df['species_rank']=df['species'].rank(ascending=False)
+print(df_rank)
